@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecobags | Catálogo</title>
+  <meta name="description" content="Ecobags artesanais feitas com carinho. Veja o catálogo e peça pelo WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container topo__inner">
+      <a href="#inicio" class="logo">🌿 Minha Lojinha</a>
+      <nav class="menu">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="container hero__inner">
+      <div class="hero__texto">
+        <span class="selo">Feito à mão • Sustentável</span>
+        <h1>Ecobags que carregam estilo e cuidado com o planeta</h1>
+        <p>Bolsas de tecido reutilizáveis, estampadas e costuradas com carinho. Escolha a sua e fale comigo pelo WhatsApp!</p>
+        <div class="hero__acoes">
+          <a href="#catalogo" class="btn btn--primario">Ver catálogo</a>
+          <button class="btn btn--whats" data-whats="Olá! Vim pelo site e gostaria de saber mais sobre as ecobags 😊">
+            Falar no WhatsApp
+          </button>
+        </div>
+      </div>
+      <div class="hero__imagem" aria-hidden="true">👜</div>
+    </div>
+  </section>
+
+  <section id="catalogo" class="catalogo">
+    <div class="container">
+      <h2>Catálogo</h2>
+      <p class="subtitulo">Clique em “Quero esta!” para pedir pelo WhatsApp.</p>
+
+      <div class="filtros" id="filtros"></div>
+      <div class="grade" id="grade"></div>
+    </div>
+  </section>
+
+  <section id="sobre" class="sobre">
+    <div class="container sobre__inner">
+      <h2>Sobre a lojinha</h2>
+      <p>Cada ecobag é produzida artesanalmente, com tecidos resistentes e estampas exclusivas. A ideia é simples: menos sacola plástica, mais personalidade no seu dia a dia.</p>
+      <ul class="vantagens">
+        <li>♻️ Reutilizável e durável</li>
+        <li>✂️ Produção artesanal</li>
+        <li>🎨 Estampas exclusivas</li>
+        <li>📦 Encomendas personalizadas</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="container">
+      <h2>Vamos conversar?</h2>
+      <p>Tire dúvidas, peça orçamento de encomendas ou reserve sua ecobag.</p>
+      <button class="btn btn--whats btn--grande" data-whats="Olá! Gostaria de fazer um pedido de ecobag.">
+        Chamar no WhatsApp
+      </button>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <p>© <span id="ano"></span> Minha Lojinha de Ecobags</p>
+  </footer>
+
+  <!-- Botão flutuante -->
+  <button class="whats-flutuante" data-whats="Olá! Vim pelo site 😊" aria-label="Abrir WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9C5 9.9 9.9 5.2 16 5.2s11 4.7 11 10.6-4.9 10.6-11 10.6zm6-7.9c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
