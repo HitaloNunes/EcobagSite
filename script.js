@@ -6,12 +6,12 @@ const WHATSAPP_NUMERO = "558599518597";
 // Para adicionar/editar ecobags, basta mexer nesta lista.
 // "imagem": caminho da foto (ex.: "img/girassol.jpg"). Se vazio, mostra um ícone.
 const produtos = [
-  { id: 1, nome: "Ecobag Dá Seus Pulos",   categoria: "Ecobag", preco: 45.0, descricao: "Ecobag com ilustração e gesto de \"Dá seus pulos\"", imagem: "assets\\faco_de_minhas_maos.jpeg", tag: "Novidade" },
-  { id: 2, nome: "Ecobag Faço de minhas mãos",    categoria: "Ecobag",      preco: 35.0, descricao: "Ecobag com texto Faço de Minhas mãos",   imagem: "assets\\i_love_cuscuz.jpeg", tag: "Novidade" },
-  { id: 3, nome: "Ecobag I Love Cuscuz",      categoria: "Ecobag", preco: 50.0, descricao: "Ecobag ensinando a soletrar \"cuscuz\"",              imagem: "assets\\da_seus_pulos.jpeg", tag: "Novidade" },
-  { id: 4, nome: "Ecobag Letras Libras",  categoria: "Ecobag", preco: 45.0, descricao: "Ecobag com foto de Ernest Huet.",                     imagem: "assets\\letras_libras_ernest.jpeg", tag: "Novidade" },
-  { id: 5, nome: "Ecobag Libras em Ondas",  categoria: "Ecobag",      preco: 55.0, descricao: "Ecobag com titulo Libras e ondas coloridas",                  imagem: "assets\\libras_ondas.jpeg", tag: "Novidade" },
-  { id: 6, nome: "Ecobag Qual seu Super Poder?", categoria: "Ecobag", preco: 60.0, descricao: "Ecobag perguntando qual o seu superpoder", imagem: "assets\\qual_seu_super_poder.jpeg", tag: "Novidade" },
+  { id: 1, nome: "Ecobag Dá Seus Pulos",   categoria: "Ecobag", preco: 25.0, descricao: "Ecobag com ilustração e gesto de \"Dá seus pulos\"", imagem: "assets\\da_seus_pulos.jpeg", tag: "Novidade" },
+  { id: 2, nome: "Ecobag Faço de minhas mãos",    categoria: "Ecobag",      preco: 25.0, descricao: "Ecobag com texto Faço de Minhas mãos",   imagem: "assets\\faco_de_minhas_maos.jpeg", tag: "Novidade" },
+  { id: 3, nome: "Ecobag I Love Cuscuz",      categoria: "Ecobag", preco: 25.0, descricao: "Ecobag ensinando a soletrar \"cuscuz\"",              imagem: "assets\\i_love_cuscuz.jpeg", tag: "Novidade" },
+  { id: 4, nome: "Ecobag Letras Libras",  categoria: "Ecobag", preco: 25.0, descricao: "Ecobag com foto de Ernest Huet.",                     imagem: "assets\\letras_libras_ernest.jpeg", tag: "Novidade" },
+  { id: 5, nome: "Ecobag Libras em Ondas",  categoria: "Ecobag",      preco: 25.0, descricao: "Ecobag com titulo Libras e ondas coloridas",                  imagem: "assets\\libras_ondas.jpeg", tag: "Novidade" },
+  { id: 6, nome: "Ecobag Qual seu Super Poder?", categoria: "Ecobag", preco: 25.0, descricao: "Ecobag perguntando qual o seu superpoder", imagem: "assets\\qual_seu_super_poder.jpeg", tag: "Novidade" },
 ];
 
 // ===== FUNÇÕES =====
