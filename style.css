@@ -73,11 +73,18 @@ a { color: inherit; text-decoration: none; }
 .hero p { color: var(--texto-suave); font-size: 1.1rem; margin-bottom: 28px; }
 .hero__acoes { display: flex; flex-wrap: wrap; gap: 12px; }
 .hero__imagem {
-  aspect-ratio: 1; border-radius: 50% 50% 40% 60% / 55% 45% 55% 45%;
+  aspect-ratio: 1;
+  border-radius: 50% 50% 40% 60% / 55% 45% 55% 45%;
   background: linear-gradient(135deg, var(--azul-claro), var(--verde) 70%);
   border: 6px solid var(--terracota);
-  display: grid; place-items: center; font-size: clamp(5rem, 15vw, 9rem);
   box-shadow: var(--sombra);
+  overflow: hidden;
+}
+.hero__imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Catálogo */
