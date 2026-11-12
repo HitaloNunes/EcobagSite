@@ -73,18 +73,28 @@ a { color: inherit; text-decoration: none; }
 .hero p { color: var(--texto-suave); font-size: 1.1rem; margin-bottom: 28px; }
 .hero__acoes { display: flex; flex-wrap: wrap; gap: 12px; }
 .hero__imagem {
+  aspect-ratio: 1; border-radius: 50% 50% 40% 60% / 55% 45% 55% 45%;
+  background: linear-gradient(135deg, var(--azul-claro), var(--verde) 70%);
+  border: 6px solid var(--terracota);
+  display: grid; place-items: center; font-size: clamp(5rem, 15vw, 9rem);
+  box-shadow: var(--sombra);
+}
+
+.hero__imagem {
   aspect-ratio: 1;
   border-radius: 50% 50% 40% 60% / 55% 45% 55% 45%;
   background: linear-gradient(135deg, var(--azul-claro), var(--verde) 70%);
   border: 6px solid var(--terracota);
+  overflow: hidden;            /* recorta a imagem no formato da div */
   box-shadow: var(--sombra);
-  overflow: hidden;
+  /* pode remover display:grid, place-items e font-size, eram para o emoji */
 }
+
 .hero__imagem img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
+  object-fit: cover;           /* preenche sem distorcer, cortando o excesso */
+  display: block;              /* remove o espacinho branco embaixo da imagem */
 }
 
 /* Catálogo */
@@ -119,6 +129,83 @@ a { color: inherit; text-decoration: none; }
 .card__desc { color: var(--texto-suave); font-size: .95rem; flex: 1; }
 .card__preco { font-weight: 700; font-size: 1.2rem; color: var(--verde-escuro); margin: 6px 0 10px; }
 .card .btn { width: 100%; }
+
+/* ===== Carrossel ===== */
+.carrossel { position: relative; --por-vista: 1; }
+.carrossel__janela { overflow: hidden; border-radius: var(--raio); }
+.carrossel__trilho {
+  display: flex;
+  transition: transform .5s ease;
+  cursor: grab;
+  touch-action: pan-y;          /* deixa rolar a página na vertical, o carrossel cuida do horizontal */
+  user-select: none;
+}
+.carrossel__trilho.arrastando { transition: none; cursor: grabbing; }
+
+.slide { flex: 0 0 calc(100% / var(--por-vista)); padding: 0 10px; }
+.slide figure {
+  background: var(--creme); border-radius: var(--raio); overflow: hidden;
+  box-shadow: var(--sombra); border-bottom: 5px solid var(--terracota);
+}
+.slide img {
+  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;
+  pointer-events: none;          /* evita o "arrastar imagem" nativo do navegador */
+}
+.slide figcaption {
+  padding: 14px; text-align: center; font-weight: 700; color: var(--verde-escuro);
+}
+
+.carrossel__seta {
+  position: absolute; top: 45%; transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 50%; border: none;
+  background: var(--verde); color: var(--branco); font-size: 1.8rem; line-height: 1;
+  cursor: pointer; box-shadow: var(--sombra); z-index: 2;
+}
+.carrossel__seta:hover { background: var(--verde-escuro); }
+.carrossel__seta--esq { left: -6px; }
+.carrossel__seta--dir { right: -6px; }
+
+.carrossel__pontos { display: flex; justify-content: center; gap: 8px; margin: 20px 0 8px; }
+.ponto {
+  width: 10px; height: 10px; border-radius: 50%; border: none; padding: 0;
+  background: var(--areia); cursor: pointer; transition: all .2s ease;
+}
+.ponto.ativo { background: var(--terracota); width: 26px; border-radius: 999px; }
+
+@media (min-width: 600px) { .carrossel { --por-vista: 2; } }
+@media (min-width: 900px) { .carrossel { --por-vista: 3; } }
+
+/* ===== Tamanhos e preços ===== */
+.tamanhos__titulo { margin-top: 56px; }
+.tamanhos {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 280px));
+  justify-content: center; align-items: end; gap: 32px;
+}
+.tamanho {
+  background: var(--creme); border-radius: var(--raio); padding: 24px 20px;
+  text-align: center; box-shadow: var(--sombra);
+}
+.tamanho__desenho { width: 100%; max-width: 200px; margin: 0 auto 8px; display: block; }
+.tamanho__desenho .traco {
+  fill: none; stroke: var(--verde); stroke-width: 3;
+  stroke-dasharray: 8 6; stroke-linecap: round;
+}
+.tamanho__desenho .cota { stroke: var(--azul-claro); stroke-width: 2; stroke-dasharray: 3 4; }
+.tamanho__desenho .medida {
+  font-family: "Nunito", sans-serif; font-size: 15px; font-weight: 700;
+  fill: var(--texto-suave); text-anchor: middle;
+}
+.tamanho h3 { color: var(--verde-escuro); font-size: 1.3rem; }
+.tamanho__preco { font-size: 2rem; font-weight: 700; color: var(--verde); margin: 4px 0 14px; }
+.tamanho__preco::after {
+  content: ""; display: block; width: 40px; height: 4px; margin: 6px auto 0;
+  background: var(--terracota); border-radius: 4px;
+}
+.tamanho .btn { width: 100%; }
+
+@media (max-width: 520px) {
+  .tamanhos { grid-template-columns: 1fr; }
+}
 
 /* Sobre */
 .sobre { padding: 64px 0; }

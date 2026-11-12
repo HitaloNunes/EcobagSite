@@ -43,11 +43,48 @@
 
   <section id="catalogo" class="catalogo">
     <div class="container">
-      <h2>Catálogo</h2>
-      <p class="subtitulo">Clique em “Quero esta!” para pedir pelo WhatsApp.</p>
+      <h2>Mostruário</h2>
+      <p class="subtitulo">Arraste para o lado (ou deslize no celular) para ver todas as estampas.</p>
 
-      <div class="filtros" id="filtros"></div>
-      <div class="grade" id="grade"></div>
+      <!-- CARROSSEL -->
+      <div class="carrossel" id="carrossel">
+        <div class="carrossel__janela">
+          <div class="carrossel__trilho" id="trilho"></div>
+        </div>
+        <button class="carrossel__seta carrossel__seta--esq" id="anterior" aria-label="Estampa anterior">‹</button>
+        <button class="carrossel__seta carrossel__seta--dir" id="proximo" aria-label="Próxima estampa">›</button>
+      </div>
+      <div class="carrossel__pontos" id="pontos"></div>
+
+      <!-- TAMANHOS E PREÇOS -->
+      <h2 class="tamanhos__titulo">Tamanhos e preços</h2>
+      <p class="subtitulo">Qualquer estampa, mesmo preço. Só escolher o tamanho!</p>
+
+      <div class="tamanhos">
+        <div class="tamanho">
+          <svg viewBox="0 0 200 250" class="tamanho__desenho" aria-hidden="true">
+            <path d="M75 110 C75 55, 125 55, 125 110" class="traco" />
+            <rect x="40" y="110" width="120" height="120" rx="6" class="traco" />
+            <line x1="40" y1="242" x2="160" y2="242" class="cota" />
+            <text x="100" y="175" class="medida">30 × 30 cm</text>
+          </svg>
+          <h3>Pequena</h3>
+          <p class="tamanho__preco">R$ 25</p>
+          <button class="btn btn--whats" data-whats="Olá! Quero uma ecobag PEQUENA (30x30 cm) por R$ 25. Qual estampa vocês têm disponível?">Quero a pequena</button>
+        </div>
+
+        <div class="tamanho">
+          <svg viewBox="0 0 200 250" class="tamanho__desenho" aria-hidden="true">
+            <path d="M60 70 C60 5, 140 5, 140 70" class="traco" />
+            <rect x="20" y="70" width="160" height="160" rx="6" class="traco" />
+            <line x1="20" y1="242" x2="180" y2="242" class="cota" />
+            <text x="100" y="155" class="medida">40 × 40 cm</text>
+          </svg>
+          <h3>Grande</h3>
+          <p class="tamanho__preco">R$ 30</p>
+          <button class="btn btn--whats" data-whats="Olá! Quero uma ecobag GRANDE (40x40 cm) por R$ 30. Qual estampa vocês têm disponível?">Quero a grande</button>
+        </div>
+      </div>
     </div>
   </section>
 
